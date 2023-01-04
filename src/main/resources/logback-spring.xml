@@ -1,0 +1,43 @@
+<configuration>
+    <springProfile name="!local">
+        <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+                <providers>
+                    <timestamp>
+                        <fieldName>time</fieldName>
+                        <pattern>yyyy-MM-dd'T'HH:mm:ss.SSSZ</pattern>
+                    </timestamp>
+                    <logLevel/>
+                    <logLevelValue/>
+                    <threadName>
+                        <fieldName>thread</fieldName>
+                    </threadName>
+                    <loggerName>
+                        <fieldName>logger</fieldName>
+                    </loggerName>
+                    <contextName/>
+                    <message/>
+                    <pattern>
+                        <omitEmptyFields>true</omitEmptyFields>
+                    </pattern>
+                    <logstashMarkers/>
+                    <stackTrace>
+                        <fieldName>exception</fieldName>
+                        <throwableConverter class="net.logstash.logback.stacktrace.ShortenedThrowableConverter">
+                            <maxDepthPerThrowable>30</maxDepthPerThrowable>
+                            <maxLength>2048</maxLength>
+                            <shortenedClassNameLength>20</shortenedClassNameLength>
+                            <exclude>^sun\.reflect\..*\.invoke</exclude>
+                            <exclude>^net\.sf\.cglib\.proxy\.methodProxy\.invoke</exclude>
+                            <rootCauseFirst>true</rootCauseFirst>
+                        </throwableConverter>
+                    </stackTrace>
+                </providers>
+            </encoder>
+        </appender>
+    </springProfile>
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
