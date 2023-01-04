@@ -78,7 +78,22 @@ This library provide the structured logging mechanism for java apps
                 .withMessage("This is a warning log")
                 .warn();
 ```
+### Contribution guidelines ###
 
+```json
+{
+   "time":"2023-01-04T12:34:59.714+1300",
+   "level":"INFO",
+   "level_value":20000,
+   "thread":"main",
+   "logger":"com.parrotanalytics.component.BittorrentRawDataProcessor",
+   "context":"default",
+   "message":"Application started to process data",
+   "time-started":1672788899713,
+   "task":"Bit-Torrent-Raw-Data-Processor",
+   "event_source":"Bit-Torrent-Raw-Data-Processor"
+}
+```
 ### Contribution guidelines ###
 
 * Writing tests
