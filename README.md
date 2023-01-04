@@ -3,8 +3,8 @@
 This library provide the structured logging mechanism for java apps
 
 ### Features of this logging library ###
-* You have the flexibility to implement your own log masking(example if someone is adding password, secrets in the logs we can use the Log.java build method can be used implement the masking pattern)
-* More efficient SRE dashboard can be build derived from the attributes values we are passing
+* You have the flexibility to implement your own log masking(example if someone is adding password, secrets in the logs the Log.java build method can be used to implement the masking pattern)
+* More efficient SRE dashboard can be build, derived from the attributes values we are passing
 * More readable log lines
 * Fast and easy log search for developers using ELK(using attributes values)
 
@@ -78,7 +78,7 @@ This library provide the structured logging mechanism for java apps
                 .withMessage("This is a warning log")
                 .warn();
 ```
-### Contribution guidelines ###
+### Sample log message output ###
 
 ```json
 {
