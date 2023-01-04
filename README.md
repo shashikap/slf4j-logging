@@ -82,16 +82,17 @@ This library provide the structured logging mechanism for java apps
 
 ```json
 {
-   "time":"2023-01-04T12:34:59.714+1300",
-   "level":"INFO",
-   "level_value":20000,
-   "thread":"main",
-   "logger":"com.parrotanalytics.component.BittorrentRawDataProcessor",
-   "context":"default",
-   "message":"Application started to process data",
-   "time-started":1672788899713,
-   "task":"Bit-Torrent-Raw-Data-Processor",
-   "event_source":"Bit-Torrent-Raw-Data-Processor"
+  "time":"2023-01-04T13:17:36.310+1300",
+  "level":"INFO",                                                     // log level passed with logger
+  "level_value":40000,
+  "thread":"main",
+  "logger":"com.parrotanalytics.component.BittorrentRawDataProcessor",
+  "context":"default",
+  "message":"Application started to process data",                    // message passed withMessage method
+  "time-started":1672791456308,                                       // attribute passed withAttribute method
+  "started-value":"initial",                                          // attribute passed withAttribute method
+  "task":"Bit-Torrent-Raw-Data-Processor",                            // task passed withTask method
+  "event_source":"Bit-Torrent-Raw-Data-Processor"
 }
 ```
 ### Contribution guidelines ###
