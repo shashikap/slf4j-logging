@@ -1,4 +1,4 @@
-package com.parrotanalytics.logging;
+package com.shashika.logging;
 
 public interface LogFacadeFactory {
 

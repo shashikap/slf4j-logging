@@ -17,66 +17,74 @@ This library provide the structured logging mechanism for java apps
 ### How to write logs with new log library ###
 
 * Info logs
+
 ```java
         // import the library
-        import com.parrotanalytics.logging.Logger;
-        import com.parrotanalytics.logging.LoggerFactory;
-        
-        //create the Logger
-        private static final Logger LOGGER = LoggerFactory.getLogger(BittorrentRawDataProcessor.class);
-        
-        LOGGER.withTask("Bit-Torrent-Raw-Data-Processor")
-                .withAttribute("time-started", stopWatch.getStartTime())
-                .withAttribute("started-value", "initial")
-                .withMessage("Application started to process data")
-                .info();
+
+import com.shashika.logging.Logger;
+import com.shashika.logging.LoggerFactory;
+
+//create the Logger
+private static final Logger LOGGER=LoggerFactory.getLogger(RawDataProcessor.class);
+
+    LOGGER.withTask("Raw-Data-Processor")
+    .withAttribute("time-started",stopWatch.getStartTime())
+    .withAttribute("started-value","initial")
+    .withMessage("Application started to process data")
+    .info();
 ```
 * Error logs
+
 ```java
         // import the library
-        import com.parrotanalytics.logging.Logger;
-        import com.parrotanalytics.logging.LoggerFactory;
-        
-        //create the Logger
-        private static final Logger LOGGER = LoggerFactory.getLogger(BittorrentRawDataProcessor.class);
 
-        LOGGER.withTask("Bit-Torrent-Raw-Data-Processor")
-                .withAttribute("time-started", stopWatch.getStartTime())
-                .withAttribute("started-value", "initial")
-                .withMessage("Error encountered while processing application")
-                .error();
+import com.shashika.logging.Logger;
+import com.shashika.logging.LoggerFactory;
+
+//create the Logger
+private static final Logger LOGGER=LoggerFactory.getLogger(RawDataProcessor.class);
+
+    LOGGER.withTask("Raw-Data-Processor")
+    .withAttribute("time-started",stopWatch.getStartTime())
+    .withAttribute("started-value","initial")
+    .withMessage("Error encountered while processing application")
+    .error();
 ```
 
 * Debug logs
+
 ```java
         // import the library
-        import com.parrotanalytics.logging.Logger;
-        import com.parrotanalytics.logging.LoggerFactory;
-        
-        //create the Logger
-        private static final Logger LOGGER = LoggerFactory.getLogger(BittorrentRawDataProcessor.class);
 
-        LOGGER.withTask("Bit-Torrent-Raw-Data-Processor")
-                .withAttribute("time-started", stopWatch.getStartTime())
-                .withAttribute("started-value", "initial")
-                .withMessage("This is a debug log")
-                .debug();
+import com.shashika.logging.Logger;
+import com.shashika.logging.LoggerFactory;
+
+//create the Logger
+private static final Logger LOGGER=LoggerFactory.getLogger(RawDataProcessor.class);
+
+    LOGGER.withTask("Raw-Data-Processor")
+    .withAttribute("time-started",stopWatch.getStartTime())
+    .withAttribute("started-value","initial")
+    .withMessage("This is a debug log")
+    .debug();
 ```
 
 * Warning logs
+
 ```java
         // import the library
-        import com.parrotanalytics.logging.Logger;
-        import com.parrotanalytics.logging.LoggerFactory;
-        
-        //create the Logger
-        private static final Logger LOGGER = LoggerFactory.getLogger(BittorrentRawDataProcessor.class);
 
-        LOGGER.withTask("Bit-Torrent-Raw-Data-Processor")
-                .withAttribute("time-started", stopWatch.getStartTime())
-                .withAttribute("started-value", "initial")
-                .withMessage("This is a warning log")
-                .warn();
+import com.shashika.logging.Logger;
+import com.shashika.logging.LoggerFactory;
+
+//create the Logger
+private static final Logger LOGGER=LoggerFactory.getLogger(RawDataProcessor.class);
+
+    LOGGER.withTask("Raw-Data-Processor")
+    .withAttribute("time-started",stopWatch.getStartTime())
+    .withAttribute("started-value","initial")
+    .withMessage("This is a warning log")
+    .warn();
 ```
 ### Sample log message output ###
 
@@ -86,13 +94,13 @@ This library provide the structured logging mechanism for java apps
   "level":"INFO",                                                     // log level passed with logger
   "level_value":40000,
   "thread":"main",
-  "logger":"com.parrotanalytics.component.BittorrentRawDataProcessor",
+  "logger":"com.shashika.component.RawDataProcessor",
   "context":"default",
   "message":"Application started to process data",                    // message passed withMessage method
   "time-started":1672791456308,                                       // attribute passed withAttribute method
   "started-value":"initial",                                          // attribute passed withAttribute method
-  "task":"Bit-Torrent-Raw-Data-Processor",                            // task passed withTask method
-  "event_source":"Bit-Torrent-Raw-Data-Processor"
+  "task":"Raw-Data-Processor",                                        // task passed withTask method
+  "event_source":"Raw-Data-Processor"
 }
 ```
 ### Contribution guidelines ###

@@ -2,7 +2,7 @@ plugins {
     id("java")
 }
 
-group = "com.parrotanalytics"
+group = "com.shashika"
 version = "1.0-SNAPSHOT"
 
 java {

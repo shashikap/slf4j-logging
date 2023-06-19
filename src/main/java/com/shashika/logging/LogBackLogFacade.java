@@ -1,4 +1,4 @@
-package com.parrotanalytics.logging;
+package com.shashika.logging;
 
 import net.logstash.logback.marker.LogstashMarker;
 import net.logstash.logback.marker.Markers;

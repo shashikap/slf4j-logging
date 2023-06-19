@@ -1,8 +1,6 @@
-package com.parrotanalytics.logging;
+package com.shashika.logging;
 
 import java.io.Serializable;
-
-import com.parrotanalytics.logging.Log.Builder;
 
 public final class Logger implements Serializable {
     private final String actor;
@@ -13,7 +11,7 @@ public final class Logger implements Serializable {
         this.logFacade = logFacade;
     }
 
-    public Builder withTask(String task) {
+    public Log.Builder withTask(String task) {
         return Log.newBuilder(this.logFacade).withTask(this.actor, task);
     }
 

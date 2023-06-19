@@ -1,2 +1,2 @@
-rootProject.name = "parrot-slf4j-logging"
+rootProject.name = "slf4j-logging"
 
